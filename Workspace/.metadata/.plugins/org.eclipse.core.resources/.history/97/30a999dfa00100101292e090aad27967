@@ -1,0 +1,16 @@
+package Ejercicio_1_Red_Social;
+
+public class Retweet extends Tweet {
+	private Tweet tweetOriginal;
+	
+	public Retweet(Tweet unTweetOriginal) {
+		this.setTweetOriginalt
+
+	private Tweet getTweetOriginal() {
+		return tweetOriginal;
+	}
+
+	private void setTweetOriginal(Tweet tweetOriginal) {
+		this.tweetOriginal = tweetOriginal;
+	};
+}

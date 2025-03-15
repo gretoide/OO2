@@ -1,0 +1,23 @@
+package Ejercicio_2_Piedra_Papel_Tijera;
+
+public class Piedra implements Jugada {
+
+	@Override
+	public boolean resolverPiedra() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean resolverPapel() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean resolverTijera() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

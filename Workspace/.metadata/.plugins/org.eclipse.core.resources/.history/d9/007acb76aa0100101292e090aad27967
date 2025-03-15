@@ -1,0 +1,7 @@
+package Ejercicio_1_Red_Social;
+
+import java.util.List;
+
+public class Twitter {
+	private List<Usuario> usuarios;
+}

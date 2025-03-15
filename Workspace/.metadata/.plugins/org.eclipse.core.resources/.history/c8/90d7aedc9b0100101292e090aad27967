@@ -1,0 +1,17 @@
+package Ejercicio_2_Piedra_Papel_Tijera;
+
+public class Juego {
+	private Jugador jugadorUno;
+	private Jugador jugadorDos;
+	
+	public String jugar(Jugador jugadorUno, Jugador jugadorDos) {
+		
+		Jugada jugadaUno = jugadorUno.getMiJugada();
+		Jugada jugadaDos = jugadorDos.getMiJugada();
+		
+		String resultado = jugadaUno.jugarContra(jugadaDos);
+		
+		return "Resultado: " + resultado;
+	}
+	
+}

@@ -1,0 +1,5 @@
+package Ejercicio_1_Red_Social;
+
+public class Twitter {
+	private List<Usuario> usuarios;
+}

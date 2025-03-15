@@ -1,0 +1,46 @@
+package Ejercicio_1_Red_Social;
+import java.util.ArrayList;
+import java.util.List;
+import com.sun.tools.javac.util.List;
+
+public class Usuario {
+	private String screenName;
+	private List<Tweet> tweets;
+	
+	public Usuario(String unScreenName) {
+		this.screenName = unScreenName;
+		this.tweets = new ArrayList<Tweet>();
+	}
+	
+	public void realizarTweet(String unTexto) {
+		if (this.verificarLongitud(unTexto)) {
+			Tweet tweet = new Tweet(unTexto);
+	        this.tweets.add(tweet);
+		}
+	}
+	
+	public void realizarRetweet(Tweet unTweetOriginal) {
+		Retweet retweet = Retweet(unTweetOriginal);
+		this.tweets.add(retweet);
+	}
+	
+	private void eliminarTweets() {
+		this.tweets.clear();
+	}
+	
+	private String getScreenName() {
+		return screenName;
+	}
+
+	private void setScreenName(String screenName) {
+		this.screenName = screenName;
+	}
+	
+	protected boolean verificarLongitud(String unTexto) {
+	    if (unTexto.length() > 1 && unTexto.length() <= 280) {
+	        return true;
+	    } else {
+	        return false;
+	    }
+	}
+}

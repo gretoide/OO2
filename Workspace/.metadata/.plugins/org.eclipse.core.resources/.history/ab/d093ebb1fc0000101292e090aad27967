@@ -1,0 +1,61 @@
+package testPiedraPapelTijera;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import Ejercicio_2_Piedra_Papel_Tijera.Juego;
+
+public class testPiedraPapelTijera {
+	private Juego juego;
+    private Jugador jugador1;
+    private Jugador jugador2;
+
+    @BeforeEach
+    void setUp() {
+        juego = new Juego();
+        jugador1 = new Jugador("Alice");
+        jugador2 = new Jugador("Bob");
+    }
+
+    @Test
+    void piedraVsTijeraDebeGanarPiedra() {
+        jugador1.setMiJugada(new Piedra());
+        jugador2.setMiJugada(new Tijera());
+        assertEquals("Piedra gana (Alice vs Bob)", juego.jugar(jugador1, jugador2));
+    }
+
+    @Test
+    void piedraVsPapelDebeGanarPapel() {
+        jugador1.setMiJugada(new Piedra());
+        jugador2.setMiJugada(new Papel());
+        assertEquals("Papel gana (Alice vs Bob)", juego.jugar(jugador1, jugador2));
+    }
+
+    @Test
+    void tijeraVsPapelDebeGanarTijera() {
+        jugador1.setMiJugada(new Tijera());
+        jugador2.setMiJugada(new Papel());
+        assertEquals("Tijera gana (Alice vs Bob)", juego.jugar(jugador1, jugador2));
+    }
+
+    @Test
+    void papelVsPapelDebeSerEmpate() {
+        jugador1.setMiJugada(new Papel());
+        jugador2.setMiJugada(new Papel());
+        assertEquals("Empate entre Alice y Bob", juego.jugar(jugador1, jugador2));
+    }
+
+    @Test
+    void piedraVsPiedraDebeSerEmpate() {
+        jugador1.setMiJugada(new Piedra());
+        jugador2.setMiJugada(new Piedra());
+        assertEquals("Empate entre Alice y Bob", juego.jugar(jugador1, jugador2));
+    }
+
+    @Test
+    void tijeraVsTijeraDebeSerEmpate() {
+        jugador1.setMiJugada(new Tijera());
+        jugador2.setMiJugada(new Tijera());
+        assertEquals("Empate entre Alice y Bob", juego.jugar(jugador1, jugador2));
+    }
+}

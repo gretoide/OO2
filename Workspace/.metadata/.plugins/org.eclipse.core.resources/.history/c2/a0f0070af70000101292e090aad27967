@@ -1,0 +1,8 @@
+package Ejercicio_2_Piedra_Papel_Tijera;
+
+public interface Jugada {
+	
+	abstract boolean resolverPiedra();
+	abstract boolean resolverPapel();
+	abstract boolean resolverTijera();
+}

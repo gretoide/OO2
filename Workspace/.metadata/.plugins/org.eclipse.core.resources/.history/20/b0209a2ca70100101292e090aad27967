@@ -1,0 +1,38 @@
+package Ejercicio_1_Red_Social;
+import java.util.ArrayList;
+
+public class Usuario {
+	private String screenName;
+	private List<Tweet> tweets = new ArrayList<>();
+	
+	public Usuario(String unScreenName) {
+		this.screenName = unScreenName;
+	}
+	
+	public String realizarTweet(String unTexto) {
+		if this.verificarLongitud(unTexto) {
+			Tweet tweet = new Tweet(unTexto);
+	        this.tweets.add(tweet);
+		}
+		else {
+			return "No se pudo publicar el tweet.";
+		}
+	}
+
+	public 
+	private String getScreenName() {
+		return screenName;
+	}
+
+	private void setScreenName(String screenName) {
+		this.screenName = screenName;
+	}
+	
+	protected boolean verificarLongitud(String unTexto) {
+	    if (unTexto.length() > 1 && unTexto.length() <= 280) {
+	        return true;
+	    } else {
+	        return false;
+	    }
+	}
+}
