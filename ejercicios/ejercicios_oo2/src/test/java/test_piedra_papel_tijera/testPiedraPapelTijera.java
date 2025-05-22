@@ -5,11 +5,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import ejercicio_2_piedra_papel_tijera.Juego;
-import ejercicio_2_piedra_papel_tijera.Jugador;
-import ejercicio_2_piedra_papel_tijera.Papel;
-import ejercicio_2_piedra_papel_tijera.Piedra;
-import ejercicio_2_piedra_papel_tijera.Tijera;
+import ejercicio_x_piedra_papel_tijera.Juego;
+import ejercicio_x_piedra_papel_tijera.Jugador;
+import ejercicio_x_piedra_papel_tijera.Papel;
+import ejercicio_x_piedra_papel_tijera.Piedra;
+import ejercicio_x_piedra_papel_tijera.Tijera;
 
 public class testPiedraPapelTijera {
     private Juego juego;
